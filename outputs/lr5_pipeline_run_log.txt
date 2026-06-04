@@ -1,0 +1,69 @@
+Running Dummy: most frequent seed=42
+Running Dummy: most frequent seed=43
+Running Dummy: most frequent seed=44
+Running Dummy: most frequent seed=45
+Running Dummy: most frequent seed=46
+Running Dummy: most frequent seed=47
+Running Dummy: most frequent seed=48
+Running Subject only seed=42
+Running Subject only seed=43
+Running Subject only seed=44
+Running Subject only seed=45
+Running Subject only seed=46
+Running Subject only seed=47
+Running Subject only seed=48
+Running Body only seed=42
+Running Body only seed=43
+Running Body only seed=44
+Running Body only seed=45
+Running Body only seed=46
+Running Body only seed=47
+Running Body only seed=48
+Running Subject+Body seed=42
+Running Subject+Body seed=43
+Running Subject+Body seed=44
+Running Subject+Body seed=45
+Running Subject+Body seed=46
+Running Subject+Body seed=47
+Running Subject+Body seed=48
+Running Main: subject+body+language seed=42
+Running Main: subject+body+language seed=43
+Running Main: subject+body+language seed=44
+Running Main: subject+body+language seed=45
+Running Main: subject+body+language seed=46
+Running Main: subject+body+language seed=47
+Running Main: subject+body+language seed=48
+Running Ablation: unigrams only seed=42
+Running Ablation: unigrams only seed=43
+Running Ablation: unigrams only seed=44
+Running Ablation: unigrams only seed=45
+Running Ablation: unigrams only seed=46
+Running Ablation: unigrams only seed=47
+Running Ablation: unigrams only seed=48
+Running Ablation: small vocabulary seed=42
+Running Ablation: small vocabulary seed=43
+Running Ablation: small vocabulary seed=44
+Running Ablation: small vocabulary seed=45
+Running Ablation: small vocabulary seed=46
+Running Ablation: small vocabulary seed=47
+Running Ablation: small vocabulary seed=48
+Running Ablation: +tags seed=42
+Running Ablation: +tags seed=43
+Running Ablation: +tags seed=44
+Running Ablation: +tags seed=45
+Running Ablation: +tags seed=46
+Running Ablation: +tags seed=47
+Running Ablation: +tags seed=48
+
+Summary:
+                 experiment  accuracy_mean  accuracy_ci95  macro_f1_mean  macro_f1_ci95  weighted_f1_mean  weighted_f1_ci95  p_value_vs_main_macro_f1
+    Ablation: unigrams only       0.400476       0.008066       0.294072       0.018062          0.376169          0.009427              1.180210e-01
+            Ablation: +tags       0.410159       0.010554       0.286922       0.011071          0.375122          0.012364              4.822783e-01
+               Subject+Body       0.405714       0.009611       0.283192       0.013918          0.372469          0.011491              9.778315e-01
+Main: subject+body+language       0.406508       0.011419       0.283156       0.014954          0.372964          0.013703                       NaN
+                  Body only       0.397619       0.007228       0.270076       0.006612          0.363519          0.009318              3.974824e-02
+ Ablation: small vocabulary       0.383810       0.011425       0.243726       0.011904          0.343182          0.013340              1.302961e-04
+               Subject only       0.290159       0.006645       0.207593       0.012046          0.281536          0.006575              9.989533e-05
+       Dummy: most frequent       0.292540       0.000501       0.045266       0.000060          0.132421          0.000403              1.927850e-08
+
+Saved outputs to /mnt/data/lr5_outputs_quick
