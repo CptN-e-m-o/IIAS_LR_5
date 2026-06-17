@@ -1,0 +1,94 @@
+{
+  "dataset_rows": 16338,
+  "language_filter": "en",
+  "target": "queue",
+  "classes": 10,
+  "class_distribution": {
+    "Technical Support": 4737,
+    "Product Support": 3073,
+    "Customer Service": 2410,
+    "IT Support": 1942,
+    "Billing and Payments": 1595,
+    "Returns and Exchanges": 820,
+    "Service Outages and Maintenance": 664,
+    "Sales and Pre-Sales": 513,
+    "Human Resources": 348,
+    "General Inquiry": 236
+  },
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "split": "stratified train/val/test = 70/15/15",
+  "configs": [
+    {
+      "name": "Dummy most frequent",
+      "feature_mode": "subject_body",
+      "max_features": null,
+      "ngram_range": [
+        1,
+        1
+      ],
+      "alpha": 0.1,
+      "is_dummy": true
+    },
+    {
+      "name": "Subject only",
+      "feature_mode": "subject",
+      "max_features": 20000,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "alpha": 0.1,
+      "is_dummy": false
+    },
+    {
+      "name": "Body only",
+      "feature_mode": "body",
+      "max_features": 20000,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "alpha": 0.1,
+      "is_dummy": false
+    },
+    {
+      "name": "Subject + Body",
+      "feature_mode": "subject_body",
+      "max_features": 20000,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "alpha": 0.1,
+      "is_dummy": false
+    },
+    {
+      "name": "Small vocabulary",
+      "feature_mode": "subject_body",
+      "max_features": 3000,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "alpha": 0.1,
+      "is_dummy": false
+    },
+    {
+      "name": "Subject + Body + tags",
+      "feature_mode": "subject_body_tags",
+      "max_features": 20000,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "alpha": 0.1,
+      "is_dummy": false
+    }
+  ]
+}
